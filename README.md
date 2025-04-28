@@ -1,6 +1,6 @@
-Currently working on Machine learning project
-Learning ML
-Discord : Rishabh_xD
+-Currently working on Machine learning project
+-Learning ML
+-Discord : Rishabh_xD
 
 
 <!--
