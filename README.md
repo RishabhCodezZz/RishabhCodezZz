@@ -1,4 +1,4 @@
-<h1 align="center">Hi, I'm Rishabh Kumar Yadav 👋</h1>
+<h1 align="center">Hi, I'm Rishabh 👋</h1>
 <h3 align="center">AI/ML Engineer • Multi-Agent Systems & RAG • Published Researcher</h3>
 
 <p align="center">
