@@ -12,7 +12,7 @@
   <a href="https://github.com/RishabhCodezZz" target="_blank"><img src="https://img.shields.io/badge/GitHub-2d333b?style=flat-square&logo=github&logoColor=white" /></a>
 </p>
 
-- 🎓 Final-year B.Tech CSE (AI & ML) student, expected May 2027
+- 🎓 Final-year B.Tech CSE (AI & ML) student
 - 📄 Corresponding author of **NutriRAG-ML**, a multilingual RAG framework — accepted at **CML 2026, Springer (Scopus-indexed)**
 - 🔭 Currently building **ARGUS**, a hierarchical multi-agent due-diligence system, and researching GAN-based deepfake detection for my final-year thesis
 - 🌱 Deepening my focus on **multi-agent systems & agentic AI**
