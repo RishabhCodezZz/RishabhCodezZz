@@ -1,23 +1,64 @@
-<h1 align="center">Hey , I'm Rishabh</h1>
-<h3 align="center">Tech Enthusiast</h3>
+<h1 align="center">Hi, I'm Rishabh Kumar Yadav 👋</h1>
+<h3 align="center">AI/ML Engineer • Multi-Agent Systems & RAG • Published Researcher</h3>
 
-- 🔭 I’m currently working on [House Price Prediction](https://github.com/RishabhCodezZz/HousePricePrediction)
-
-- 🌱 I’m currently learning **Machine Learning**
-
-- 📫 How to reach me **gamingrishabh11@gmail.com**
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/rishabh-k-78128b293" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="rishabh-k-78128b293" height="30" width="40" /></a>
-<a href="https://www.leetcode.com/rishabhk_11" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="rishabhk_11" height="30" width="40" /></a>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&pause=1200&color=0969DA&center=true&vCenter=true&width=520&lines=Building+Agentic+AI+%26+RAG+Systems;Multi-Agent+Orchestration+(Google+ADK);Corresponding+Author+%40+CML+2026%2C+Springer" alt="Typing SVG" />
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> </a> </p>
+<p align="center">
+  <a href="https://www.linkedin.com/in/rishabhk11/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-2d333b?style=flat-square&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:rishabhsanu11@gmail.com"><img src="https://img.shields.io/badge/Email-2d333b?style=flat-square&logo=gmail&logoColor=white" /></a>
+  <a href="https://leetcode.com/rishabhk_11" target="_blank"><img src="https://img.shields.io/badge/LeetCode-2d333b?style=flat-square&logo=leetcode&logoColor=white" /></a>
+  <a href="https://github.com/RishabhCodezZz" target="_blank"><img src="https://img.shields.io/badge/GitHub-2d333b?style=flat-square&logo=github&logoColor=white" /></a>
+</p>
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=rishabhcodezzz&show_icons=true&locale=en&layout=compact" alt="rishabhcodezzz" /></p>
+- 🎓 Final-year B.Tech CSE (AI & ML) student, expected May 2027
+- 📄 Corresponding author of **NutriRAG-ML**, a multilingual RAG framework — accepted at **CML 2026, Springer (Scopus-indexed)**
+- 🔭 Currently building **ARGUS**, a hierarchical multi-agent due-diligence system, and researching GAN-based deepfake detection for my final-year thesis
+- 🌱 Deepening my focus on **multi-agent systems & agentic AI**
+- 📫 Reach me at **rishabhsanu11@gmail.com**
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=rishabhcodezzz&show_icons=true&locale=en" alt="rishabhcodezzz" /></p>
+<br>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=rishabhcodezzz&" alt="rishabhcodezzz" /></p>
+### 🚀 Featured Projects
+
+**[ARGUS](https://github.com/RishabhCodezZz/ARGUS)** — Autonomous multi-agent due-diligence system
+Hierarchical agents on Google's Agent Development Kit (ADK): a dynamic orchestrator routes requests across specialist agents, a deterministic quant agent, a self-critique loop, and a groundedness verifier with prompt-injection guardrails. 38 passing tests.
+
+**[NutriBot (NutriRAG-ML)](https://github.com/RishabhCodezZz/NutriBot-RAG)** — Multilingual RAG for personalized diet recommendations
+ChromaDB vector search + cross-encoder reranking + FastAPI, integrating Gemini 2.5 Flash. Outperformed GPT-4o by 4.9–5.1% in the published evaluation. Published at CML 2026, Springer.
+
+**[Meraki AI](https://meraki-ai-voice-agent.onrender.com)** — Real-time multimodal voice assistant
+Async FastAPI + WebSockets backend orchestrating speech recognition (AssemblyAI), LLM inference (Gemini), and speech synthesis (Murf AI), with multi-turn conversational memory.
+
+<br>
+
+### 🛠️ Tech Stack
+
+<p align="left">
+  <img src="https://img.shields.io/badge/Python-2d333b?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-2d333b?style=flat-square&logo=javascript&logoColor=white" />
+  <img src="https://img.shields.io/badge/PyTorch-2d333b?style=flat-square&logo=pytorch&logoColor=white" />
+  <img src="https://img.shields.io/badge/TensorFlow-2d333b?style=flat-square&logo=tensorflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/Hugging%20Face-2d333b?style=flat-square&logo=huggingface&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-2d333b?style=flat-square&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-2d333b?style=flat-square&logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/Scikit--learn-2d333b?style=flat-square&logo=scikitlearn&logoColor=white" />
+  <img src="https://img.shields.io/badge/XGBoost-2d333b?style=flat-square" />
+  <img src="https://img.shields.io/badge/MySQL-2d333b?style=flat-square&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/ChromaDB-2d333b?style=flat-square" />
+  <img src="https://img.shields.io/badge/Google%20Cloud-2d333b?style=flat-square&logo=googlecloud&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-2d333b?style=flat-square&logo=git&logoColor=white" />
+</p>
+
+<br>
+
+### 📊 GitHub Stats
+
+<p align="left">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=RishabhCodezZz&show_icons=true&theme=graywhite&hide_border=true&count_private=true" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=RishabhCodezZz&layout=compact&theme=graywhite&hide_border=true" />
+</p>
+<p align="left">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=RishabhCodezZz&theme=default&hide_border=true" />
+</p>
