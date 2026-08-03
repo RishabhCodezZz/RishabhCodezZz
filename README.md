@@ -53,13 +53,3 @@ Async FastAPI + WebSockets backend orchestrating speech recognition (AssemblyAI)
 
 <br>
 
-### 📊 GitHub Stats
-
-<p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=RishabhCodezZz&show_icons=true&theme=github_dark&hide_border=true&count_private=true" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=RishabhCodezZz&layout=compact&theme=github_dark&hide_border=true" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=RishabhCodezZz&theme=github-dark&hide_border=true" />
-</p>
