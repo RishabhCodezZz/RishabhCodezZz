@@ -77,8 +77,8 @@
 ### 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=RishabhCodezZz&show_icons=true&theme=transparent&hide_border=true&title_color=0969DA&text_color=8b949e&icon_color=0969DA" alt="Rishabh's GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=RishabhCodezZz&show_icons=true&theme=radical&hide_border=true" alt="Rishabh's GitHub Stats" />
 </p>
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=RishabhCodezZz&theme=transparent&hide_border=true&title_color=0969DA&text_color=8b949e&icon_color=0969DA" alt="Rishabh's GitHub Streak" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=RishabhCodezZz&theme=radical&hide_border=true" alt="Rishabh's GitHub Streak" />
 </p>
