@@ -2,7 +2,7 @@
 <h3 align="center">AI/ML Engineer • Multi-Agent Systems & RAG • Published Researcher</h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&pause=1200&color=0969DA&center=true&vCenter=true&width=560&lines=Building+Agentic+AI+%26+RAG+Systems;Multi-Agent+Orchestration+(Google+ADK);Corresponding+Author+%40+CML+2026%2C+Springer;Open-Source+Contributor+%40+Docling+(IBM+Research)" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&pause=1200&color=0969DA&center=true&vCenter=true&width=560&lines=Building+Agentic+AI+%26+RAG+Systems;Multi-Agent+Orchestration+(Google+ADK);Corresponding+Author+%40+CML+2026%2C+Springer;Open-Source+Contributor" alt="Typing SVG" />
 </p>
 
 <p align="center">
