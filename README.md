@@ -13,8 +13,8 @@
 
 ---
 
-**Final-year B.Tech CSE (AI & ML)** at B.V. Raju Institute of Technology, Hyderabad, India (graduating May 2027).
-**Open to full-time AI/ML Engineer roles** (joining mid-2027) and internships before then.
+🎓 **Final-year B.Tech CSE (AI & ML)** at B.V. Raju Institute of Technology, Hyderabad, India (graduating May 2027).
+💼 **Open to full-time AI/ML Engineer roles** (joining mid-2027) and internships before then.
 
 - 📄 Corresponding author on **NutriRAG-ML**, accepted at **CML 2026, Springer** (Scopus-indexed).
 - 🔧 Merged a bug fix into **[Docling](https://github.com/docling-project/docling)** (IBM Research, 66k+ ⭐) — [PR #3949](https://github.com/docling-project/docling/pull/3949).
@@ -24,16 +24,16 @@
 
 ---
 
-## Featured work
+## 🚀 Featured work
 
 | Project | What it is | The number that matters |
 |---|---|---|
-| **[Meraki](https://github.com/RishabhCodezZz/Meraki-AI-Voice-Agent)** · [live demo ↗](https://meraki-ai-voice-agent.onrender.com) | Real-time streaming voice agent (STT → LLM → TTS over one WebSocket) | **~1.2–1.9 s** to first audio, down from 4.0 s · 97 tests · CI on every push |
-| **[Arbiter](https://github.com/RishabhCodezZz/Arbiter)** | Fraud **decision** system that prices outcomes in ₹, not a fraud classifier | **+₹1.678 crore** vs no fraud system (95% CI ₹1.51–1.85 cr) on 92,427 held-out real transactions |
-| **[ARGUS](https://github.com/RishabhCodezZz/ARGUS)** | 11-agent hierarchical due-diligence system on Google ADK | Groundedness **1.00** on clean runs · 120 unit tests · ablation study with committed raw evidence |
-| **[NutriBot](https://github.com/RishabhCodezZz/NutriBot-RAG)** | Multilingual RAG diet assistant (EN / Hindi / Telugu) | **1.6%** hallucination rate, **0%** safety violations · published at CML 2026, Springer |
-| **[Credit Risk](https://github.com/RishabhCodezZz/Credit-Risk-Detection)** | 3-class credit-score classifier, built as a leakage audit | Proved public notebooks on this dataset are inflated by **+0.1197 macro-F1** from customer leakage |
-| **[CrossFuse](https://github.com/RishabhCodezZz/DeepFake-Detection)** | Multi-modal audio-visual deepfake detection with per-modality attribution | 0.95 in-domain AUC vs **0.61 zero-shot** — the gap is the finding, reported not hidden |
+| 🎙️ **[Meraki](https://github.com/RishabhCodezZz/Meraki-AI-Voice-Agent)** · [live demo ↗](https://meraki-ai-voice-agent.onrender.com) | Real-time streaming voice agent (STT → LLM → TTS over one WebSocket) | **~1.2–1.9 s** to first audio, down from 4.0 s · 97 tests · CI on every push |
+| ⚖️ **[Arbiter](https://github.com/RishabhCodezZz/Arbiter)** | Fraud **decision** system that prices outcomes in ₹, not a fraud classifier | **+₹1.678 crore** vs no fraud system (95% CI ₹1.51–1.85 cr) on 92,427 held-out real transactions |
+| 🕵️ **[ARGUS](https://github.com/RishabhCodezZz/ARGUS)** | 11-agent hierarchical due-diligence system on Google ADK | Groundedness **1.00** on clean runs · 120 unit tests · ablation study with committed raw evidence |
+| 🥗 **[NutriBot](https://github.com/RishabhCodezZz/NutriBot-RAG)** | Multilingual RAG diet assistant (EN / Hindi / Telugu) | **1.6%** hallucination rate, **0%** safety violations · published at CML 2026, Springer |
+| 📉 **[Credit Risk](https://github.com/RishabhCodezZz/Credit-Risk-Detection)** | 3-class credit-score classifier, built as a leakage audit | Proved public notebooks on this dataset are inflated by **+0.1197 macro-F1** from customer leakage |
+| 🎭 **[CrossFuse](https://github.com/RishabhCodezZz/DeepFake-Detection)** | Multi-modal audio-visual deepfake detection with per-modality attribution | 0.95 in-domain AUC vs **0.61 zero-shot** — the gap is the finding, reported not hidden |
 
 <br>
 
@@ -93,19 +93,19 @@ Audio-visual detection with four heads (video, audio, sync, fusion), trained on 
 
 ---
 
-## Open source
+## 🌍 Open source
 
-**[Docling](https://github.com/docling-project/docling)** (IBM Research, 66k+ ⭐) — root-caused and fixed a hyperlink-extraction regression that dropped URLs across ODT paragraphs, headings and list items. Shipped through 3 rounds of maintainer review, 44 tests passing, zero regressions. **[PR #3949, merged](https://github.com/docling-project/docling/pull/3949)**.
+📄 **[Docling](https://github.com/docling-project/docling)** (IBM Research, 66k+ ⭐) — root-caused and fixed a hyperlink-extraction regression that dropped URLs across ODT paragraphs, headings and list items. Shipped through 3 rounds of maintainer review, 44 tests passing, zero regressions. **[PR #3949, merged](https://github.com/docling-project/docling/pull/3949)**.
 
 ---
 
-## Tech
+## 🧰 Tech Stack
 
-**Languages** — Python, JavaScript, SQL
-**ML** — PyTorch, scikit-learn, LightGBM, XGBoost, CatBoost, Optuna, SHAP, Hugging Face Transformers
-**LLM / Agents** — Google ADK, Gemini, Ollama, ChromaDB, cross-encoder reranking, RAG evaluation
-**Backend** — FastAPI, Flask, asyncio, WebSockets, pytest
-**Tooling** — Git, GitHub Actions, Docker, Kaggle, Render
+💻 **Languages** — Python, JavaScript, SQL
+🧠 **ML** — PyTorch, scikit-learn, LightGBM, XGBoost, CatBoost, Optuna, SHAP, Hugging Face Transformers
+🤖 **LLM / Agents** — Google ADK, Gemini, Ollama, ChromaDB, cross-encoder reranking, RAG evaluation
+⚙️ **Backend** — FastAPI, Flask, asyncio, WebSockets, pytest
+🛠️ **Tooling** — Git, GitHub Actions, Docker, Kaggle, Render
 
 ---
 
