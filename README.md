@@ -17,7 +17,7 @@
 
 💼 **Open to full-time AI/ML Engineer roles** (joining mid-2027) and internships before then.
 
-📄 Published at **CML 2026, Springer** (Scopus-indexed) &nbsp;·&nbsp; 🔧 Merged [PR #3949](https://github.com/docling-project/docling/pull/3949) into **[Docling](https://github.com/docling-project/docling)** (IBM Research, 66k+ ⭐)
+📄 Paper accepted at **CML 2026, Springer** — in press (Scopus-indexed proceedings) &nbsp;·&nbsp; 🔧 Merged [PR #3949](https://github.com/docling-project/docling/pull/3949) into **[Docling](https://github.com/docling-project/docling)** (IBM Research, 66k+ ⭐)
 
 ---
 
@@ -28,7 +28,7 @@
 | 🎙️ **[Meraki](https://github.com/RishabhCodezZz/Meraki-AI-Voice-Agent)** · [live demo ↗](https://meraki-ai-voice-agent.onrender.com) | Real-time streaming voice agent (STT → LLM → TTS over one WebSocket) | **~1.2–1.9 s** to first audio, down from 4.0 s · 97 tests · CI on every push |
 | ⚖️ **[Arbiter](https://github.com/RishabhCodezZz/Arbiter)** | Fraud **decision** system that prices outcomes in ₹, not a fraud classifier | **+₹1.678 crore** vs no fraud system (95% CI ₹1.51–1.85 cr) on 92,427 held-out real transactions |
 | 🕵️ **[ARGUS](https://github.com/RishabhCodezZz/ARGUS)** | 11-agent hierarchical due-diligence system on Google ADK (my thesis) | Groundedness **1.00** on clean runs · 120 unit tests · ablation study with committed raw evidence |
-| 🥗 **[NutriBot](https://github.com/RishabhCodezZz/NutriBot-RAG)** | Multilingual RAG diet assistant (EN / Hindi / Telugu) | **1.6%** hallucination rate, **0%** safety violations · published at CML 2026, Springer |
+| 🥗 **[NutriBot](https://github.com/RishabhCodezZz/NutriBot-RAG)** | Multilingual RAG diet assistant (EN / Hindi / Telugu) | **1.6%** hallucination rate, **0%** safety violations · accepted at CML 2026, Springer (in press) |
 | 📉 **[Credit Risk](https://github.com/RishabhCodezZz/Credit-Risk-Detection)** | 3-class credit-score classifier, built as a leakage audit | Proved public notebooks on this dataset are inflated by **+0.1197 macro-F1** from customer leakage |
 | 🎭 **[CrossFuse](https://github.com/RishabhCodezZz/DeepFake-Detection)** | Multi-modal audio-visual deepfake detection with per-modality attribution | 0.95 in-domain AUC vs **0.61 zero-shot** — the gap is the finding, reported not hidden |
 
@@ -61,7 +61,7 @@ A research system that refuses to state a number it cannot trace back to a sourc
 
 ### 🥗 [NutriBot](https://github.com/RishabhCodezZz/NutriBot-RAG) — multilingual RAG
 
-Retrieval-augmented diet assistant that auto-detects your language and answers in it, across English, Hindi and Telugu. Corresponding author on the paper (NutriRAG-ML).
+Retrieval-augmented diet assistant that auto-detects your language and answers in it, across English, Hindi and Telugu. Corresponding author on the paper (NutriRAG-ML), accepted at CML 2026, Springer — in press.
 
 * **Safety is tested, not prompted-and-hoped:** refuses foods conflicting with a stated allergy or condition even when they appear in retrieved context — verified by the eval suite rather than assumed from the prompt.
 * **No self-grading:** the eval suite's LLM-judge deliberately runs on a different provider than generation.
