@@ -142,6 +142,16 @@ Audio-visual detection with four heads (video, audio, sync, fusion), trained on 
   <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" alt="Kaggle" />
 </p>
 
+**AI-Assisted Development**
+
+<p align="left">
+  <img src="https://img.shields.io/badge/Claude%20Code-D97757?style=for-the-badge&logo=claude&logoColor=white" alt="Claude Code" />
+  <img src="https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white" alt="Cursor" />
+  <img src="https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude" />
+</p>
+
+<sub>Daily driver for building and reviewing — in Arbiter, three rounds of automated AI code review surfaced six real defects I had missed, including a NaN calibrator that would have produced a silent <code>allow</code>. Every finding verified and fixed by hand; the tooling proposes, the tests decide.</sub>
+
 ---
 
 <p align="center">
