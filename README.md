@@ -75,7 +75,7 @@ Most public notebooks on this dataset report an inflated score because each cust
 * **Discipline:** split before any statistic is computed, causal `shift(1)` rolling features, 10 model variants ranked on out-of-fold score only, holdout touched **exactly once**.
 * **Two hypotheses that failed are kept in the notebook on purpose** — customer-level averaging and per-class threshold tuning, both rejected by their own noise floor.
 * **Final:** macro-F1 0.7046 · ROC-AUC 0.8715 — a greedy-weighted ensemble that beat every individual model.
-* **Followed up on a reader's suggestion:** benchmarked TabPFN-3.5 against the tuned ensemble on the same split — competitive on AUC and accuracy, but ~4,000x slower to predict for a lower macro-F1. Cost story, not an accuracy story.
+* **Followed up on two readers' suggestions, in public, and updated the number when they were right:** TabPFN-3.5 first ran on the same one-hot matrix as the trees and landed a bit behind, at 92 minutes just to predict. A reader flagged that foundation models expect raw columns, not a one-hot tree matrix — fixing that and capping its training context moved *both* numbers at once: macro-F1 to 0.7017 (0.003 off the tuned ensemble), predict time down to ~11 minutes. Still slower than XGBoost, just no longer misleadingly so.
 
 ### 🎭 [CrossFuse](https://github.com/RishabhCodezZz/DeepFake-Detection) — multi-modal deepfake detection
 
