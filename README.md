@@ -1,4 +1,6 @@
-<h1 align="center">Rishabh Kumar Yadav</h1>
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a2e,100:0f3460&height=110&section=header&text=Rishabh%20Kumar%20Yadav&fontSize=34&fontColor=ffffff&fontAlignY=50&desc=AI/ML%20Engineer&descAlignY=75&descSize=16&descAlign=50" alt="Rishabh Kumar Yadav — AI/ML Engineer" width="100%" />
+</p>
 
 <p align="center">
   <b>AI/ML Engineer</b> — agentic systems, RAG, applied ML.<br>
@@ -20,7 +22,7 @@ Paper accepted at **CML 2026, Springer** — Scopus-indexed proceedings, in pres
 ## Projects
 
 | Project | What it is | The number that matters |
-|---|---|---|
+|:---|:---|:---|
 | **[ARGUS](https://github.com/RishabhCodezZz/ARGUS)** | 11-agent hierarchical due-diligence system on Google ADK (my thesis) | Groundedness **1.00** on clean runs · 140 tests · ablation study with committed raw evidence |
 | **[Meraki](https://github.com/RishabhCodezZz/Meraki-AI-Voice-Agent)** · [live ↗](https://meraki-ai-voice-agent.onrender.com) | Real-time streaming voice agent (STT → LLM → TTS over one WebSocket) | **~1.3–2.2 s** to first audio, down from 4.0 s · 97 tests in CI |
 | **[Arbiter](https://github.com/RishabhCodezZz/Arbiter)** | Fraud **decision** system that prices outcomes in ₹, not a fraud classifier | **+₹1.678 crore** vs no fraud system (95% CI ₹1.51–1.85 cr) on 92,427 held-out real transactions |
@@ -47,12 +49,6 @@ Paper accepted at **CML 2026, Springer** — Scopus-indexed proceedings, in pres
 
 </details>
 
-## Open source
-
-**[Docling](https://github.com/docling-project/docling)** (IBM Research · 66k★) — [PR #3949](https://github.com/docling-project/docling/pull/3949), **merged**. Root-caused a regression that had been silently dropping hyperlinks from ODT paragraphs, headings and list items since v2.118.0. Landed across three rounds of maintainer review with new edge-case tests and no regressions.
-
-**[Feast](https://github.com/feast-dev/feast)** (7.3k★) — [PR #6772](https://github.com/feast-dev/feast/pull/6772), under review. `feast apply` in remote mode registered feature views but never provisioned their tables, so every later write to a new feature failed with an HTTP 500 at materialization. Proposed three fix designs to the reporter and built the one they picked: two feature-server endpoints that provision from protobuf payloads, plus an end-to-end lifecycle test.
-
 ## Stack
 
 **Languages** · Python, JavaScript, SQL<br>
@@ -60,3 +56,9 @@ Paper accepted at **CML 2026, Springer** — Scopus-indexed proceedings, in pres
 **LLM & agents** · Google ADK, Gemini, Ollama, Hugging Face, ChromaDB, Deepgram<br>
 **Backend & infra** · FastAPI, asyncio, WebSockets, React, pytest, GitHub Actions, Git, MySQL, GCP, Render<br>
 **Tooling** · Claude Code, Cursor
+
+## Open source
+
+**[Docling](https://github.com/docling-project/docling)** (IBM Research · 66k★) — [PR #3949](https://github.com/docling-project/docling/pull/3949), **merged**. Root-caused a regression that had been silently dropping hyperlinks from ODT paragraphs, headings and list items since v2.118.0. Landed across three rounds of maintainer review with new edge-case tests and no regressions.
+
+**[Feast](https://github.com/feast-dev/feast)** (7.3k★) — [PR #6772](https://github.com/feast-dev/feast/pull/6772), under review. `feast apply` in remote mode registered feature views but never provisioned their tables, so every later write to a new feature failed with an HTTP 500 at materialization. Proposed three fix designs to the reporter and built the one they picked: two feature-server endpoints that provision from protobuf payloads, plus an end-to-end lifecycle test.
