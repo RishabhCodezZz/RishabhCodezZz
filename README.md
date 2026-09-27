@@ -59,6 +59,6 @@ Paper presented at **CML 2026, Springer** — Scopus-indexed proceedings, in pre
 
 ## Open source
 
-**[Docling](https://github.com/docling-project/docling)** (LF AI \& Data Foundation · 67.9k★) — [PR #3949](https://github.com/docling-project/docling/pull/3949), **merged**. Root-caused a regression that had been silently dropping hyperlinks from ODT paragraphs, headings and list items since v2.118.0. Landed across three feedback-driven revisions — addressing community code review and a Codecov coverage gap — with new edge-case tests and no regressions.
+**[Docling](https://github.com/docling-project/docling)** (LF AI \& Data Foundation · 67.9k★) — [PR #3949](https://github.com/docling-project/docling/pull/3949), **merged**. Root-caused a regression that had been silently dropping hyperlinks from ODT paragraphs, headings and list items since v2.118.0. Landed across three feedback-driven revisions, addressing community code review and a Codecov coverage gap, with new edge-case tests and no regressions.
 
 **[Feast](https://github.com/feast-dev/feast)** (7.3k★) — [PR #6772](https://github.com/feast-dev/feast/pull/6772), under review. `feast apply` in remote mode registered feature views but never provisioned their tables, so every later write to a new feature failed with an HTTP 500 at materialization. Proposed three fix designs to the reporter and built the one they picked: two feature-server endpoints that provision from protobuf payloads, plus an end-to-end lifecycle test.
