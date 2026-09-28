@@ -1,4 +1,4 @@
-<h1 align="center">Rishabh Kumar Yadav</h1>
+<h1 align="center">Rishabh</h1>
 
 <p align="center">
   <b>AI/ML Engineering · Agentic Systems · Applied Machine Learning</b>
