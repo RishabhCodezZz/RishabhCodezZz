@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  I build AI applications and the software behind them—from ML evaluation
+  I build AI applications and the software behind them, from ML evaluation
   and retrieval to streaming APIs, automated tests, and deployment.
 </p>
 
@@ -23,7 +23,7 @@
 
 Final-year **B.Tech CSE (AI & ML)** student at **B.V. Raju Institute of Technology, Hyderabad**, graduating **May 2027**.
 
-**Open to SDE, AI/ML, and GenAI engineering internships, as well as applied ML research opportunities. Available for full-time roles from mid-2027.**
+**Seeking SDE, AI/ML, and GenAI engineering internships and applied ML research opportunities; available for full-time roles from mid-2027.**
 
 - Build projects spanning multi-agent systems, streaming voice, RAG, and predictive ML.
 - Contributed a merged fix to **Docling** and a proposed remote-provisioning fix to **Feast**.
@@ -34,8 +34,8 @@ Final-year **B.Tech CSE (AI & ML)** student at **B.V. Raju Institute of Technolo
 
 | Project | What I built | Selected evidence |
 |:---|:---|:---|
-| **[ARGUS](https://github.com/RishabhCodezZz/ARGUS)** | An 11-agent financial due-diligence system using Google ADK and Gemini; my thesis project. | **156 tests** and an **8-scenario evaluation** scored on four deterministic metrics, with committed ablation evidence. |
-| **[Meraki](https://github.com/RishabhCodezZz/Meraki-AI-Voice-Agent)** · [Demo ↗](https://meraki-ai-voice-agent.onrender.com) | A streaming voice agent with a WebSocket pipeline, interruptible responses, and session isolation. | Reduced measured time to first audio from **4.0 s to ~1.3–2.2 s**; **97 tests in CI**. |
+| **[ARGUS](https://github.com/RishabhCodezZz/ARGUS)** | An 11-agent financial due-diligence system using Google ADK and Gemini. | **156 tests** and an **8-scenario evaluation** scored on four deterministic metrics, with committed ablation evidence. |
+| **[Meraki](https://github.com/RishabhCodezZz/Meraki-AI-Voice-Agent)** · [Demo ↗](https://meraki-ai-voice-agent.onrender.com) | A streaming voice agent using WebSockets, Deepgram, Ollama, and Murf, with interruptible replies and per-session API keys. | First audio in **1.0–1.1 s**, down from **4.0 s** in local measurements; latest result covers **3 runs on one machine**. **242 tests in CI** (140 backend, 102 browser-logic). Demo requires your own API keys. |
 | **[Arbiter](https://github.com/RishabhCodezZz/Arbiter)** | A fraud decision system that evaluates actions using financial costs and benefits. | Evaluated on **92,427 held-out transactions**; estimated **₹1.678 crore benefit** over a no-system baseline in an offline experiment.* |
 
 *Arbiter’s financial result is an experimental estimate, not realized savings.
@@ -53,23 +53,37 @@ input. Results are scored on **four deterministic metrics**.
 
 Clean evaluation runs achieved **1.00 groundedness**. In an ablation experiment,
 removing code execution preserved that score but eliminated the derived
-analytical content—showing why factual accuracy alone does not measure
-analytical usefulness.
+analytical content.
 
 Contradiction detection and the release gate use deterministic checks without
 LLM calls. Raw ablation evidence is committed to the repository.
 
 ### Meraki — streaming, concurrency, and isolation
 
-Clause-level chunking reduced measured time to first audio from **4.0 s to 3.2 s**.
-A streaming TTS endpoint brought it to **~1.3–2.2 s**.
+Clause-level chunking cut measured time to first audio from **4.0 s to 3.2 s**.
+Replacing Murf’s one-shot call with its streaming endpoint brought it to
+approximately **1.4 s**. The initial pipeline rarely overlapped generation and
+speech because the agent gave one-sentence replies, and the only sentence
+boundary was at the end. Cutting the first chunk at a comma allowed speech
+to begin earlier.
 
-The initial sentence-level pipeline rarely overlapped generation and speech
-because the agent was configured to give one-sentence replies.
-Barge-in cancels a per-turn `asyncio.Task`.
+Barge-in cancels a per-turn `asyncio.Task` and stops audio that is still playing
+after generation has finished. A code review found two bugs: playback waited
+until three chunks were queued, and barge-in did nothing once the reply had
+finished generating. Both cases now have tests.
 
-The test suite includes a regression check for a fixed shared-state bug that
-could expose one session’s API keys to another session.
+During testing, `nemotron-3-nano` took **18–30 s** to produce its first token,
+while `gemma4:31b` took approximately **0.5 s** using the same API key.
+These measurements informed a switch in the default model. Following the
+switch, time to first audio measured **1.0–1.1 s across three local runs on
+one machine**; this is a small sample, not a production latency guarantee.
+
+The **242-test CI suite** includes **140 backend tests** and
+**102 browser-logic tests**. It also guards against a fixed shared-state bug
+that could expose one session’s API keys to another.
+
+The hosted demo requires visitors to supply their own Deepgram, Ollama,
+and Murf API keys.
 
 ### Arbiter — separating decisions from explanations
 
@@ -79,7 +93,7 @@ of `gpt-oss:20b` with approximately **60× lower latency**.
 The LLM generates explanations; removing it leaves every decision unchanged.
 
 A separate experiment measured a **0.0066 PR-AUC increase** when future
-information was allowed into the pipeline, quantifying the effect of leakage.
+information was allowed into the pipeline.
 
 </details>
 
@@ -87,28 +101,35 @@ information was allowed into the pipeline, quantifying the effect of leakage.
 
 | Project | Focus | Selected finding |
 |:---|:---|:---|
-| **[CrossFuse](https://github.com/RishabhCodezZz/DeepFake-Detection)** | Audio-visual deepfake detection and cross-dataset generalization. | Improved mean zero-shot AUC from approximately **0.61 to 0.855** across DFDC and Celeb-DF, with bootstrap confidence intervals. |
+| **[CrossFuse](https://github.com/RishabhCodezZz/DeepFake-Detection)** | Audio-visual deepfake detection and cross-dataset generalization. | Mean zero-shot AUC rose from approximately **0.61 to 0.855** across DFDC and Celeb-DF (single seed, bootstrap confidence intervals); **47 tests in CI**. |
 | **[NutriBot](https://github.com/RishabhCodezZz/NutriBot-RAG)** | A multilingual RAG diet assistant supporting English, Hindi, and Telugu. | **48 evaluation cases** covering retrieval, factuality, numeric accuracy, and safety; **no observed safety violations** in the suite. |
 | **[Credit Risk](https://github.com/RishabhCodezZz/Credit-Risk-Detection)** | Three-class credit-score prediction with a customer-leakage audit. | Measured a **0.1197 macro-F1 gap** between a leaky row split and a customer-grouped split. |
 
 <details>
 <summary><b>Research and evaluation details</b></summary>
 
-### CrossFuse — investigating generalization failures
+### CrossFuse — investigating a generalization failure
 
-Investigated a reference baseline that achieved **0.95 in-domain AUC** but
-approximately **0.61 zero-shot AUC** on unseen datasets.
+My earlier EfficientNet-B4 model scored **0.95 AUC in-domain** but approximately
+**0.61 zero-shot** on unseen datasets. Roughly **97%** of its training data
+consisted of Wav2Lip lip-sync fakes, while DFDC and Celeb-DF contain full-face swaps.
 
-The investigation identified a training-data mismatch: approximately **97%**
-of the training data consisted of Wav2Lip lip-sync fakes, while the target
-datasets included full-face swaps.
+The updated pipeline uses a CLIP ViT-L/14 backbone pretrained on
+FaceForensics++ with LayerNorm-only tuning before the multimodal stage.
+It achieved zero-shot AUC of **0.865 on DFDC** and **0.845 on Celeb-DF**.
 
-Pretraining a CLIP ViT-L/14 backbone on FaceForensics++ with LayerNorm-only
-tuning before modality fusion improved zero-shot AUC to **0.865 on DFDC**
-and **0.845 on Celeb-DF**.
+An ablation suggests that pretraining is the main factor behind the gain.
+However, the experiment uses **one seed**, and one ablation arm is confounded
+by a learning-rate difference, so I treat that explanation as a hypothesis
+rather than an established finding.
 
-Evaluation includes bootstrap 95% confidence intervals and assertions enforcing
-identity-disjoint splits.
+Splits are identity-disjoint and enforced by assertions. Results include
+**bootstrap 95% confidence intervals**, and **47 unit tests** run in GitHub
+Actions. The intervals do not capture variation across training seeds.
+
+I also documented three negative results: a self-blended-image pretraining
+approach, a lip-sync head that stayed at chance, and a multi-GPU setup that
+ran approximately **3× slower**.
 
 ### NutriBot — evaluating retrieval and response safety
 
@@ -121,6 +142,9 @@ and LLM-judged faithfulness and relevance.
 Safety checks include recommendations that conflict with stated allergies
 or conditions, even when conflicting foods appear in retrieved context.
 The LLM judge uses a different provider from the generation model.
+
+No safety violations were observed in this suite; that result is limited
+to the evaluated cases.
 
 ### Credit Risk — measuring customer leakage
 
@@ -140,9 +164,9 @@ Two unsuccessful hypotheses are also documented in the notebook.
 **[Docling](https://github.com/docling-project/docling) ·
 [PR #3949](https://github.com/docling-project/docling/pull/3949) · Merged**
 
-Fixed a regression that dropped hyperlinks from ODT paragraphs, headings,
-and list items. Added edge-case tests and addressed maintainer feedback
-and coverage requirements across three revisions.
+Fixed a bug where hyperlink fields were not populated for ODT paragraphs,
+headings, and list items. Added edge-case tests and addressed maintainer
+feedback and coverage requirements across three revisions.
 
 **[Feast](https://github.com/feast-dev/feast) ·
 [PR #6772](https://github.com/feast-dev/feast/pull/6772) · Under review**
@@ -156,7 +180,8 @@ test to address downstream materialization failures.
 **Languages:** Python, JavaScript, SQL  
 **Backend and applications:** FastAPI, asyncio, WebSockets, React, MySQL  
 **Machine learning:** PyTorch, scikit-learn, XGBoost, LightGBM, CatBoost, pandas, NumPy, Optuna, SHAP, OpenCV  
-**LLMs and retrieval:** Google ADK, Gemini, Ollama, Hugging Face, ChromaDB, Deepgram  
+**LLMs and retrieval:** Google ADK, Gemini, Ollama, Hugging Face, ChromaDB  
+**Speech:** Deepgram, Murf  
 **Testing and deployment:** pytest, GitHub Actions, Git, GCP, Render  
 
 ## Contact
