@@ -35,13 +35,15 @@ An 11-agent financial due-diligence system built with Google ADK and Gemini. It 
 
 ### [GateKeep](https://github.com/RishabhCodezZz/GateKeep)
 
-A document-question-answering project I built to learn how Laya can handle decisions inside a RAG pipeline. I fine-tuned four gates and connected them through LangGraph: routing the question, checking passage relevance, checking grounding, and checking whether the answer addresses the question.
+A RAG application built with LangGraph and fine-tuned Laya models. It answers questions using a machine-learning textbook and scikit-learn documentation, with four gates for question routing, passage relevance, answer grounding and sufficiency.
+
+Inspired by typed-decision models such as [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev), I used open-source [Laya](https://huggingface.co/convaiinnovations/laya) to build and fine-tune the decision layer.
 
 - Built the pipeline from PDF parsing and FAISS retrieval through reranking, answer generation, query rewriting and bounded retries.
 - Implemented interchangeable backends for a TF-IDF baseline, LLM judges, zero-shot Laya, fine-tuned Laya and a confidence-based Laya-to-Gemma cascade.
 - On 343 held-out questions, the Laya-gated pipeline scored 92.1% correctness versus 91.5% for LLM gates, using about 1.5 total LLM calls per question versus 10.9. Laya handled every gate locally in that variant; Gemma still wrote the answers.
 - Added a local web demo that searches the book and scikit-learn documentation together, shows supporting passages, and traces which checks Laya and Gemma performed.
-- Reworked the router labels and calibration after the first experiments, then reran the evaluation. The repository keeps both rounds and the [full results and limitations](https://github.com/RishabhCodezZz/GateKeep/blob/HEAD/docs/RESULTS.md).
+- Calibrated gate confidence on held-out dev data and selected per-gate fallback thresholds. The repository includes training notebooks, both evaluation rounds and the [full results and method](https://github.com/RishabhCodezZz/GateKeep/blob/HEAD/docs/RESULTS.md).
 
 ### [Meraki](https://github.com/RishabhCodezZz/Meraki-AI-Voice-Agent) · [Live demo](https://meraki-ai-voice-agent.onrender.com)
 
