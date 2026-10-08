@@ -38,8 +38,7 @@ A fraud decision system. Instead of a score, it picks allow, step-up or block pe
 
 - On 92,427 held-out test-month transactions (IEEE-CIS, split by time), the estimated benefit is ₹1.678 crore over a no-system baseline (95% CI ₹1.51 to ₹1.85 crore). This is an offline estimate that depends on the cost assumptions, not realised savings, and dataset amounts were converted from USD to INR.
 - XGBoost + LightGBM ensemble, calibrated with Platt scaling (isotonic was tried and rejected for collapsing scores).
-- XGBoost scored 3.65x the PR-AUC of `gpt-oss:20b` at about 60x lower latency, so the LLM only writes the explanation. Removing it leaves every decision unchanged.
-- Causal features cost only 0.0066 PR-AUC against a version that peeks at future data.
+- XGBoost scored 3.65x the PR-AUC of `gpt-oss:20b` at about 60x lower latency, so the LLM only writes the explanation and removing it leaves every decision unchanged. Refusing to use future data cost only 0.0066 PR-AUC.
 - Audit log is replayable and tamper-checked, and the engine fails closed if a model file is missing. 105 tests. Solo build.
 
 ### [ARGUS](https://github.com/RishabhCodezZz/ARGUS)
@@ -58,16 +57,16 @@ An 11-agent financial due-diligence system on Google ADK and Gemini. Every numbe
 | Project | What it is | What I found |
 |:---|:---|:---|
 | [CrossFuse](https://github.com/RishabhCodezZz/DeepFake-Detection) | Audio-visual deepfake detection, aimed at generalising to unseen datasets. | Mean zero-shot AUC went from about 0.61 to 0.855 on DFDC and Celeb-DF after switching to a CLIP backbone pretrained on FaceForensics++. Single seed, bootstrap CIs, identity-disjoint splits, 47 tests in CI. |
-| [GateKeep](https://github.com/RishabhCodezZz/GateKeep) | Tests whether a small fine-tuned model can make the judgment calls inside a RAG pipeline (route, grade, grounded, sufficient) instead of an LLM. | The 421M-parameter model beat Gemma 31B on 3 of 4 gates at roughly 10x lower latency, and a pipeline using it made 1.5 LLM calls per question instead of 10.9 with no significant difference in correctness. A no-gates baseline still scored higher, so the gates did not pay off here. LangGraph, 343 held-out questions, criteria written before the runs. |
+| [GateKeep](https://github.com/RishabhCodezZz/GateKeep) | Tests whether a small fine-tuned model can make the judgment calls inside a RAG pipeline (route, grade, grounded, sufficient) instead of an LLM. | The 421M-parameter model beat Gemma 31B on 3 of 4 gates at roughly 10x lower latency, and a pipeline using it made 1.5 LLM calls per question instead of 10.9 with no significant difference in correctness. A no-gates baseline still scored higher, so the gates did not pay off here. |
 | [NutriBot](https://github.com/RishabhCodezZz/NutriBot-RAG) | A multilingual RAG diet assistant (English, Hindi, Telugu) with allergy and condition safety checks. | On a 48-case suite: recall@5 0.32, hallucination rate 9.0%, no safety violations. The retrieval numbers are modest and the corpus is small. |
-| [Credit Risk](https://github.com/RishabhCodezZz/Credit-Risk-Detection) | Three-class credit-score prediction built as a leakage audit. | A random row split scored 0.8171 macro-F1 and a customer-grouped split 0.6974, a 0.1197 gap. The dataset is synthetic. |
 
 <details>
 <summary>Notes on CrossFuse and GateKeep</summary>
 
+
 **CrossFuse.** My earlier EfficientNet-B4 model scored 0.95 AUC in-domain but about 0.61 on unseen datasets, because about 97% of its training fakes were Wav2Lip lip-sync videos while DFDC and Celeb-DF contain full-face swaps. The ablation points to the FaceForensics++ pretraining as the main factor, but it uses one seed and one arm differs in learning rate, so I treat that as a hypothesis. Negative results are kept in the repo: self-blended-image pretraining, a lip-sync head that stayed at chance, and a multi-GPU setup that ran about 3x slower.
 
-**GateKeep.** Fixed latency figures come from different hardware (Kaggle T4 for the small model, a network API for Gemma), so the speed ratio is indicative. The first round had five methodology mistakes, including training rows duplicated into the calibration slice. I found them, fixed them and re-ran, and both rounds are in the repo.
+**GateKeep.** Built on LangGraph and evaluated on 343 questions from held-out chapters, with the success criteria written before the runs. The latency figures come from different hardware (Kaggle T4 for the small model, a network API for Gemma), so the speed ratio is indicative. The first round had five methodology mistakes, including training rows duplicated into the calibration slice. I found them, fixed them and re-ran, and both rounds are in the repo.
 
 </details>
 
@@ -79,6 +78,6 @@ An 11-agent financial due-diligence system on Google ADK and Gemini. Every numbe
 
 ## Skills
 
-**Strongest:** Python, asyncio, FastAPI, WebSockets, pytest, GitHub Actions, scikit-learn, XGBoost, LightGBM, PyTorch
-**Also used:** JavaScript and React, Flask, Hugging Face, LangGraph, Google ADK, ChromaDB, Optuna, SHAP, Render
+**Strongest:** Python, asyncio, FastAPI, WebSockets, pytest, GitHub Actions, scikit-learn, XGBoost, LightGBM, PyTorch  
+**Also used:** JavaScript and React, Flask, Hugging Face, LangGraph, Google ADK, ChromaDB, Optuna, SHAP, Render  
 **Services:** Gemini, Ollama Cloud, Deepgram, Murf
