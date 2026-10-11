@@ -26,7 +26,11 @@ I'm a final-year B.Tech CSE (AI & ML) student at B.V. Raju Institute of Technolo
 
 An 11-agent financial due-diligence system built with Google ADK and Gemini. It traces numerical claims back to their sources and pauses for human review when confidence is too low.
 
-![ARGUS demo](https://github.com/RishabhCodezZz/ARGUS/raw/HEAD/demo.gif)
+
+
+https://github.com/user-attachments/assets/b78615b5-0e26-44a3-b2f9-595346ca4589
+
+
 
 - Computes financial metrics by executing pandas code. Contradiction detection and the release gate run without LLM calls.
 - Checks each stated figure against its source with a mechanical claim-matcher.
