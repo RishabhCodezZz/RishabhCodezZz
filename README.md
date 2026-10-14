@@ -86,7 +86,7 @@ My earlier EfficientNet-B4 model scored 0.95 AUC in-domain and about 0.61 on uns
 
 ## Skills
 
-- Python, asyncio, FastAPI, WebSockets, pytest and GitHub Actions.
-- PyTorch, scikit-learn, XGBoost, LightGBM, Hugging Face, LangGraph and Google ADK.
-- Also used JavaScript, React, Flask, ChromaDB, Optuna, SHAP and Render.
-- Model and voice services: Gemini, Ollama Cloud, Deepgram and Murf.
+- Python, asyncio, FastAPI, WebSockets, pytest and GitHub Actions
+- PyTorch, scikit-learn, XGBoost, LightGBM, Hugging Face, LangGraph and Google ADK
+- Also used JavaScript, React, Flask, ChromaDB, Optuna, SHAP and Render
+- Model and voice services: Gemini, Ollama Cloud, Deepgram and Murf
