@@ -35,6 +35,7 @@ An 11-agent financial due-diligence system built with Google ADK and Gemini. It 
 - Checks each stated figure against its source with a mechanical claim-matcher.
 - Evaluated on 8 scenarios using 4 deterministic metrics, with ablation outputs committed. Removing code execution preserved groundedness but removed derived analysis.
 - 156 tests. Evaluation uses two fictional companies; performance on real filings remains untested.
+
 https://github.com/user-attachments/assets/b78615b5-0e26-44a3-b2f9-595346ca4589
 
 ### [GateKeep](https://github.com/RishabhCodezZz/GateKeep)
