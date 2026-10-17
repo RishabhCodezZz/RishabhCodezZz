@@ -12,7 +12,7 @@
 </p>
 
 > **Open to:** AI/ML and software engineering internships now, full-time roles from mid-2027 · Hyderabad or remote
-> Final-year B.Tech CSE (AI & ML), B.V. Raju Institute of Technology · graduating May 2027
+> Final-year B.Tech CSE (AI & ML) · graduating May 2027
 
 ## Highlights
 
