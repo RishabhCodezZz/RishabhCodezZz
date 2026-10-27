@@ -1,4 +1,4 @@
-<h1 align="center">Rishabh Kumar</h1>
+<h1 align="center">Rishabh Kumar Yadav</h1>
 
 <p align="center">
   <b>AI/ML engineer in training · agents, evaluation, backend systems</b><br/>
