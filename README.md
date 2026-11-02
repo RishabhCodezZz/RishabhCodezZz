@@ -17,19 +17,19 @@
 ## Highlights
 
 - Merged fix in [Docling](https://github.com/docling-project/docling/pull/3949), and a [Feast fix](https://github.com/feast-dev/feast/pull/6772) under review.
-- In GateKeep, a pipeline gated by a fine-tuned small model matched LLM gates on correctness (92.1% vs 91.5%, within noise) on 343 held-out questions, using about 1.5 LLM calls per question instead of 10.9.
+- GateKeep: a fine-tuned small model matched LLM judges on correctness (92.1% vs 91.5%, within noise) with about 1.5 LLM calls per question instead of 10.9.
 - Paper presented at CML 2026 (NutriRAG-ML); Springer proceedings in press.
-- Every project below ships with tests or an eval suite, and a written list of what it does not prove.
+- Every project has tests or an eval suite, and each repo states what it doesn't prove.
 - Former VIP Campus Partner at Perplexity AI.
 
 ## Featured projects
 
 ### [ARGUS](https://github.com/RishabhCodezZz/ARGUS): multi-agent financial due diligence
 
-An 11-agent system on Google ADK and Gemini that traces every number in its answer back to a source, and pauses for a human when confidence is too low.
+An 11-agent system on Google ADK and Gemini that traces every number in its answer to a source and pauses for a human when confidence is low.
 
-- Financial metrics come from executed pandas code. Contradiction detection and the release gate run with zero LLM calls.
-- Each stated figure is matched against its source, and the report is held below a 0.98 groundedness score. Guardrails and a human-in-the-loop approval gate sit on top.
+- Financial metrics come from executed pandas code. Contradiction detection and the release check make no LLM calls.
+- Each stated figure is matched against its source. A report scoring below 0.98 groundedness is held back, and guardrails and a human approval step sit on top.
 - I tested it on 8 scenarios with 4 deterministic metrics (no LLM judge) and ran an ablation. Removing code execution kept groundedness but removed all derived analysis, so groundedness alone does not catch that loss.
 - 156 tests, Ruff and Pyright in GitHub Actions CI. *Limits:* two fictional companies; real filings are untested.
 
@@ -39,7 +39,7 @@ https://github.com/user-attachments/assets/b78615b5-0e26-44a3-b2f9-595346ca4589
 
 A LangGraph RAG app over a machine-learning textbook and the scikit-learn docs. Four gates (route, relevance, grounding, sufficiency) decide each step. I fine-tuned open-source [Laya](https://huggingface.co/convaiinnovations/laya), inspired by typed-decision models such as [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev).
 
-- On 343 held-out questions, the Laya-gated pipeline got 92.1% correct against 91.5% for LLM gates, at about 1.5 LLM calls per question against 10.9. Gemma still writes the answers.
+- On 343 held-out questions, the Laya pipeline got 92.1% correct against 91.5% for LLM gates, with about 1.5 LLM calls per question against 10.9. Gemma still writes the answers.
 - The pipeline covers PDF parsing, FAISS retrieval, reranking, query rewriting with bounded retries, five interchangeable gate backends, and calibrated confidence with per-gate fallback thresholds.
 - A local web demo shows the supporting passages and a trace of which model made which check.
 - Training notebooks, both evaluation rounds and the [full results](https://github.com/RishabhCodezZz/GateKeep/blob/HEAD/docs/RESULTS.md) are in the repo.
@@ -55,9 +55,16 @@ Deepgram speech-to-text, an Ollama LLM and Murf text-to-speech over one WebSocke
 
 ## More projects
 
+### [Arbiter](https://github.com/RishabhCodezZz/Arbiter): fraud decisions by expected cost
+
+Chooses allow, step-up or block by the expected rupee cost of each action. XGBoost and LightGBM with Platt calibration.
+
+- On a held-out test month (92,427 transactions), the estimated benefit over no system was ₹1.678 crore (95% CI ₹1.51 to 1.85 crore), an offline estimate under stated cost assumptions.
+- XGBoost beat `gpt-oss:20b` by 3.65× PR-AUC at about 60× lower latency, so the LLM only writes explanations.
+- Time-based splits, a replayable tamper-checked audit log, and a fail-closed default if a model file is missing. 105 tests, solo build.
+
 | Project | What it is | Evidence |
 |:---|:---|:---|
-| [Arbiter](https://github.com/RishabhCodezZz/Arbiter) | Fraud decisions by expected cost: chooses allow, step-up or block by the expected rupee cost of each action | XGBoost + LightGBM with Platt calibration. On a held-out test month (92,427 transactions), the estimated benefit over no system was ₹1.678 crore (95% CI ₹1.51 to 1.85 crore), an offline estimate under stated cost assumptions. XGBoost beat `gpt-oss:20b` by 3.65× PR-AUC at about 60× lower latency, so the LLM only writes explanations. Time-based splits, a replayable tamper-checked audit log, fails closed if a model file is missing. 105 tests, solo build. |
 | [CrossFuse](https://github.com/RishabhCodezZz/DeepFake-Detection) | Audio-visual deepfake detection tested on unseen datasets; college project built with one teammate | Mean zero-shot AUC rose from 0.61 to 0.855 (DFDC, Celeb-DF) with a CLIP backbone pretrained on FaceForensics++. Single seed, bootstrap intervals, identity-disjoint splits, tests in CI. |
 | [NutriBot](https://github.com/RishabhCodezZz/NutriBot-RAG) | Multilingual (English, Hindi, Telugu) RAG diet assistant with allergy and condition checks | 48-case eval: recall@5 0.32, 9.0% hallucination rate, no observed safety violations |
 
