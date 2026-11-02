@@ -19,7 +19,6 @@
 - Merged fix in [Docling](https://github.com/docling-project/docling/pull/3949), and a [Feast fix](https://github.com/feast-dev/feast/pull/6772) under review.
 - GateKeep: a fine-tuned small model matched LLM judges on correctness (92.1% vs 91.5%, within noise) with about 1.5 LLM calls per question instead of 10.9.
 - Paper presented at CML 2026 (NutriRAG-ML); Springer proceedings in press.
-- Every project has tests or an eval suite, and each repo states what it doesn't prove.
 - Former VIP Campus Partner at Perplexity AI.
 
 ## Featured projects
