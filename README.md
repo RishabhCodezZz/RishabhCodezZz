@@ -1,8 +1,8 @@
 <h1 align="center">Rishabh Kumar Yadav</h1>
 
 <p align="center">
-  <b>AI/ML engineer in training · agents, evaluation, backend systems</b><br/>
-  I build AI applications, from agent workflows to streaming APIs, and test how they fail.
+  <b>Final-year CSE (AI/ML) student · agents, evaluation, backend systems</b><br/>
+  I build agent and RAG systems and stress-test how they fail.
 </p>
 
 <p align="center">
@@ -12,14 +12,14 @@
 </p>
 
 > Open to AI/ML and software engineering internships now, full-time roles from mid-2027 · Hyderabad or remote
-> Final-year B.Tech CSE (AI & ML) · graduating May 2027
+> B.Tech CSE (AI & ML) · graduating May 2027
 
 ## Highlights
 
-- Merged fix in [Docling](https://github.com/docling-project/docling/pull/3949), and a [Feast fix](https://github.com/feast-dev/feast/pull/6772) under review.
-- GateKeep: a fine-tuned small model matched LLM judges on correctness (92.1% vs 91.5%, within noise) with about 1.5 LLM calls per question instead of 10.9.
+- Merged fix in [Docling](https://github.com/docling-project/docling/pull/3949), the document parser maintained by IBM Research Zurich, reviewed by Peter Staar. A [Feast fix](https://github.com/feast-dev/feast/pull/6772) is under review.
+- GateKeep: a fine-tuned small model matched LLM judges on correctness (92.1% vs 91.5%) with about 1.5 LLM calls per question instead of 10.9.
 - Paper presented at CML 2026 (NutriRAG-ML); Springer proceedings in press.
-- Former VIP Campus Partner at Perplexity AI.
+- Former Campus Partner at Perplexity AI (Sep to Dec 2025).
 
 ## Featured projects
 
@@ -28,8 +28,8 @@
 An 11-agent system on Google ADK and Gemini that traces every number in its answer to a source and pauses for a human when confidence is low.
 
 - Financial metrics come from executed pandas code. Contradiction detection and the release check make no LLM calls.
-- Each stated figure is matched against its source. A report scoring below 0.98 groundedness is held back, and guardrails and a human approval step sit on top.
-- I tested it on 8 scenarios with 4 deterministic metrics (no LLM judge) and ran an ablation. Removing code execution kept groundedness but removed all derived analysis, so groundedness alone does not catch that loss.
+- Reports scoring below 0.98 groundedness are held back, with guardrails and a human approval step on top.
+- Tested on 8 scenarios with 4 deterministic metrics (no LLM judge) plus an ablation: removing code execution kept groundedness but removed all derived analysis.
 - 156 tests, Ruff and Pyright in GitHub Actions CI. *Limits:* two fictional companies; real filings are untested.
 
 https://github.com/user-attachments/assets/b78615b5-0e26-44a3-b2f9-595346ca4589
@@ -38,32 +38,30 @@ https://github.com/user-attachments/assets/b78615b5-0e26-44a3-b2f9-595346ca4589
 
 A LangGraph RAG app over a machine-learning textbook and the scikit-learn docs. Four gates (route, relevance, grounding, sufficiency) decide each step. I fine-tuned open-source [Laya](https://huggingface.co/convaiinnovations/laya), inspired by typed-decision models such as [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev).
 
-- On 343 held-out questions, the Laya pipeline got 92.1% correct against 91.5% for LLM gates, with about 1.5 LLM calls per question against 10.9. Gemma still writes the answers.
-- The pipeline covers PDF parsing, FAISS retrieval, reranking, query rewriting with bounded retries, five interchangeable gate backends, and calibrated confidence with per-gate fallback thresholds.
-- A local web demo shows the supporting passages and a trace of which model made which check.
-- Training notebooks, both evaluation rounds and the [full results](https://github.com/RishabhCodezZz/GateKeep/blob/HEAD/docs/RESULTS.md) are in the repo.
-- *Limits:* the 0.6-point gap over LLM gates is within noise (95% CI -2.9 to +3.8). The no-gates pipeline scored higher on correctness (95.6%), and Laya's faithfulness was lower (74.5% vs 80.5%). The gates did not improve quality; the gain is cost and latency. Gate labels were LLM-generated.
+- On 343 held-out questions, the Laya pipeline got 92.1% correct against 91.5% for LLM gates, at about 1.5 total LLM calls per question against 10.9. Gemma still writes the answers.
+- Pipeline: PDF parsing, FAISS retrieval, reranking, query rewriting with bounded retries, five interchangeable gate backends, calibrated confidence with per-gate fallback thresholds.
+- A local web demo shows the supporting passages and which model made which check.
+
+<details>
+<summary>Limits and full results</summary>
+
+The 0.6-point gap over LLM gates is within noise (95% CI -2.9 to +3.8). The no-gates pipeline scored higher on correctness (95.6%), and Laya's faithfulness was lower (74.5% vs 80.5%). The gates did not improve quality; the gain is cost and latency. Gate labels were LLM-generated. Training notebooks, both evaluation rounds and the [full results](https://github.com/RishabhCodezZz/GateKeep/blob/HEAD/docs/RESULTS.md) are in the repo.
+
+</details>
 
 ### [Meraki](https://github.com/RishabhCodezZz/Meraki-AI-Voice-Agent) · [Live demo](https://meraki-ai-voice-agent.onrender.com): real-time voice agent
 
 Deepgram speech-to-text, an Ollama LLM and Murf text-to-speech over one WebSocket (FastAPI, asyncio). You can interrupt it mid-sentence.
 
 - Time to first audio fell from 4.0 s to a 1.28 s median by synthesising clauses in parallel while the model keeps writing (10 runs, one machine, range 0.86 to 2.48 s).
-- Each turn runs as one cancellable `asyncio` task. Regression tests cover interruption handling, and per-connection API keys keep sessions isolated.
+- Each turn runs as one cancellable `asyncio` task, with regression tests for interruption handling and per-connection API keys.
 - 242 tests in CI. *Demo notes:* bring your own free-tier API keys; it can take up to a minute to wake.
 
 ## More projects
 
-### [Arbiter](https://github.com/RishabhCodezZz/Arbiter): fraud decisions by expected cost
-
-Chooses allow, step-up or block by the expected rupee cost of each action. XGBoost and LightGBM with Platt calibration.
-
-- On a held-out test month (92,427 transactions), the estimated benefit over no system was ₹1.678 crore (95% CI ₹1.51 to 1.85 crore), an offline estimate under stated cost assumptions.
-- XGBoost beat `gpt-oss:20b` by 3.65× PR-AUC at about 60× lower latency, so the LLM only writes explanations.
-- Time-based splits, a replayable tamper-checked audit log, and a fail-closed default if a model file is missing. 105 tests, solo build.
-
 | Project | What it is | Evidence |
 |:---|:---|:---|
+| [Arbiter](https://github.com/RishabhCodezZz/Arbiter) | Fraud decisions by expected cost: allow, step-up or block, using XGBoost and LightGBM with Platt calibration | On a held-out test month (92,427 transactions), estimated benefit over no system was ₹1.678 crore (95% CI ₹1.51 to 1.85 crore), an offline estimate under stated cost assumptions. XGBoost beat `gpt-oss:20b` by 3.65× PR-AUC at about 60× lower latency. Time-based splits, tamper-checked audit log, fail-closed default. 105 tests. |
 | [CrossFuse](https://github.com/RishabhCodezZz/DeepFake-Detection) | Audio-visual deepfake detection tested on unseen datasets; college project built with one teammate | Mean zero-shot AUC rose from 0.61 to 0.855 (DFDC, Celeb-DF) with a CLIP backbone pretrained on FaceForensics++. Single seed, bootstrap intervals, identity-disjoint splits, tests in CI. |
 | [NutriBot](https://github.com/RishabhCodezZz/NutriBot-RAG) | Multilingual (English, Hindi, Telugu) RAG diet assistant with allergy and condition checks | 48-case eval: recall@5 0.32, 9.0% hallucination rate, no observed safety violations |
 
@@ -76,21 +74,11 @@ My earlier EfficientNet-B4 model scored 0.95 AUC in-domain and about 0.61 on uns
 
 ## Open source
 
-- [Docling · PR #3949](https://github.com/docling-project/docling/pull/3949), merged: fixed missing hyperlinks in ODT paragraphs, headings and list items, with edge-case tests, after maintainer review.
+- [Docling · PR #3949](https://github.com/docling-project/docling/pull/3949), merged in v2.120.0: fixed missing hyperlinks in ODT paragraphs, headings and list items, with edge-case tests. Reviewed by Peter Staar of IBM Research Zurich.
 - [Feast · PR #6772](https://github.com/feast-dev/feast/pull/6772), under review: fixes remote-mode table provisioning after `feast apply`, and adds two feature-server endpoints and an end-to-end lifecycle test.
 
 ## Tech stack
 
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
-  <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face" />
-  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
-</p>
-
-- Core: Python, SQL, asyncio, FastAPI, REST APIs, WebSockets, Git, CI/CD (GitHub Actions), pytest, Ruff, Pyright
-- ML and agents: PyTorch, TensorFlow, scikit-learn, pandas, NumPy, XGBoost, LightGBM, Hugging Face, LangGraph, Google ADK, RAG, LLM evaluation, probability calibration, ablations
-- Also used: JavaScript, React, Flask, ChromaDB, FAISS, Optuna, SHAP, GCP, Render
-- Model and voice services: Gemini, Ollama Cloud, Deepgram, Murf
+- **Core:** Python, SQL, asyncio, FastAPI, REST APIs, WebSockets, Git, GitHub Actions, pytest, Ruff, Pyright
+- **ML and agents:** PyTorch, TensorFlow, scikit-learn, pandas, XGBoost, LightGBM, Hugging Face, LangGraph, Google ADK, RAG, LLM evaluation, calibration, ablations
+- **Also used:** JavaScript, React, Flask, ChromaDB, FAISS, Optuna, SHAP, GCP, Render
