@@ -6,14 +6,11 @@
 </p>
 
 <p align="center">
-  <!-- <a href="https://rishabhcodezzz.github.io"><img src="https://img.shields.io/badge/Portfolio-151614?style=flat-square" alt="Portfolio" /></a>
-  <a href="https://rishabhcodezzz.github.io/cv/RishabhKumar_Portfolio_Resume.pdf"><img src="https://img.shields.io/badge/Resume-4B5563?style=flat-square" alt="Resume" /></a>  -->
   <a href="https://www.linkedin.com/in/rishabhk11/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="mailto:rishabhsanu11@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://leetcode.com/u/MerakizZz/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
 </p>
 
-Open to AI/ML and software engineering internships now, and full-time roles from mid-2027 (graduating May 2027). Hyderabad or remote.
+Open to AI/ML and software engineering internships now, including ones that convert to full-time, and to full-time roles from mid-2027 (graduating May 2027). Based in Hyderabad; open to remote or relocating.
 
 ## Highlights
 
@@ -25,7 +22,7 @@ Open to AI/ML and software engineering internships now, and full-time roles from
 
 ### [ARGUS](https://github.com/RishabhCodezZz/ARGUS): multi-agent financial analysis with deterministic number checks
 
-An 11-agent system on Google ADK and Gemini that will not release a number it cannot trace to its source data. It runs on bundled sample data for two fictional companies.
+A system of 11 agents and 13 tools on Google ADK and Gemini that will not release a number it cannot trace to its source data. It runs on bundled sample data for two fictional companies.
 
 - A code-only verifier extracts every number from the draft and matches it against the evidence. A report is released automatically only at 0.98 groundedness or higher with a clean critic pass; otherwise a person approves or rejects it.
 - Narrow questions go to one specialist agent, which takes 2 to 3 model calls instead of about 15 to 20.
@@ -51,8 +48,8 @@ Deepgram speech-to-text, Gemma on Ollama Cloud and Murf text-to-speech over one 
 
 ## More projects
 
-- **[Arbiter](https://github.com/RishabhCodezZz/Arbiter)**: fraud decisions by expected cost (allow, step-up or block) using Platt-calibrated XGBoost and LightGBM. On a held-out month of 92,427 transactions, the policy was worth an estimated ₹1.68 crore over no system (95% CI ₹1.51 to 1.85 crore, offline simulation). Time-based splits, tamper-checked audit log, fail-closed default.
-- **[CrossFuse](https://github.com/RishabhCodezZz/DeepFake-Detection)**: audio-visual deepfake detection, built with one teammate. Mean AUC on two unseen datasets (DFDC, Celeb-DF v2) rose from 0.610 to 0.855 after FaceForensics++ pretraining on a CLIP backbone. Bootstrap intervals and identity-grouped splits.
+- **[Arbiter](https://github.com/RishabhCodezZz/Arbiter)**: fraud decisions by expected cost (allow, step-up or block) using Platt-calibrated XGBoost and LightGBM. On a later test month of 92,427 transactions, simulated value was ₹1.68 crore above no system (95% bootstrap CI ₹1.51 to 1.85 crore, under stated cost assumptions). Tamper-checked audit log, fail-closed default, 105 tests.
+- **[CrossFuse](https://github.com/RishabhCodezZz/DeepFake-Detection)**: audio-visual deepfake detection, built with one teammate; I wrote most of the code. Mean AUC on two unseen datasets (DFDC, Celeb-DF v2) rose from 0.610 to 0.855 after FaceForensics++ pretraining on a CLIP backbone. Bootstrap intervals and identity-grouped splits.
 - **[Credit-Risk-Detection](https://github.com/RishabhCodezZz/Credit-Risk-Detection)**: a leakage audit of a public credit-score dataset. A random row split inflated macro-F1 by 0.12; the customer-grouped pipeline reached macro-F1 0.70 and ROC-AUC 0.87 on held-out customers, scored once.
 - **[NutriBot](https://github.com/RishabhCodezZz/NutriBot-RAG)**: multilingual (English, Hindi, Telugu) RAG diet assistant behind the NutriRAG-ML paper. Prompt hardening cut the hallucinated-food rate from 28% to 9% on a 48-case eval, with no allergy violations.
 
