@@ -1,8 +1,8 @@
 <h1 align="center">Rishabh Kumar Yadav</h1>
 
 <p align="center">
-  <b>Final-year B.Tech CSE (AI/ML) · agents, RAG and evaluation</b><br/>
-  I build agent and RAG systems, then measure where they fail.
+  <b>Final-year B.Tech CSE (AI/ML) · ML , AI and evaluation</b><br/>
+  I build ML models and AI Agents
 </p>
 
 <p align="center">
