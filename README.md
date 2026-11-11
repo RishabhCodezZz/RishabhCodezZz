@@ -5,9 +5,9 @@
   I build agent and RAG systems, then measure where they fail.
 </p>
 
-<p align="center">
+<!-- <p align="center">
   <a href="https://rishabhcodezzz.github.io"><img src="https://img.shields.io/badge/Portfolio-151614?style=flat-square" alt="Portfolio" /></a>
-  <a href="https://rishabhcodezzz.github.io/cv/RishabhKumar_Portfolio_Resume.pdf"><img src="https://img.shields.io/badge/Resume-4B5563?style=flat-square" alt="Resume" /></a>
+  <a href="https://rishabhcodezzz.github.io/cv/RishabhKumar_Portfolio_Resume.pdf"><img src="https://img.shields.io/badge/Resume-4B5563?style=flat-square" alt="Resume" /></a> -->
   <a href="https://www.linkedin.com/in/rishabhk11/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="mailto:rishabhsanu11@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
   <a href="https://leetcode.com/u/MerakizZz/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
